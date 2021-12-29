@@ -35,11 +35,10 @@ const getHeight = ({ scale = scales.MD }: StyledInputProps) => {
 const Input = styled.input<InputProps>`
   background-color: ${({ theme }) => theme.colors.input};
   border: 0;
-  border-radius: 16px;
-  box-shadow: ${getBoxShadow};
+  border-radius: 2px;
   color: ${({ theme }) => theme.colors.text};
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   height: ${getHeight};
   outline: 0;
   padding: 0 16px;
