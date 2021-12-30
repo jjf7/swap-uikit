@@ -1840,7 +1840,7 @@ var getBackgroundColor = function (_a) {
     var theme = _a.theme, variant = _a.variant;
     return theme.colors[variant === variants$6.SUBTLE ? "input" : "tertiary"];
 };
-var getBorderColor$1 = function (_a) {
+var getBorderColor = function (_a) {
     var theme = _a.theme, variant = _a.variant;
     return theme.colors[variant === variants$6.SUBTLE ? "inputSecondary" : "disabled"];
 };
@@ -1848,7 +1848,7 @@ var StyledButtonMenu = styled.div(templateObject_1$_ || (templateObject_1$_ = __
     "\n  ", "\n"])), getBackgroundColor, function (_a) {
     var fullWidth = _a.fullWidth;
     return (fullWidth ? "flex" : "inline-flex");
-}, getBorderColor$1, function (_a) {
+}, getBorderColor, function (_a) {
     var fullWidth = _a.fullWidth;
     return (fullWidth ? "100%" : "auto");
 }, function (_a) {
@@ -2099,45 +2099,20 @@ var BottomDrawer = function (_a) {
 };
 
 var PromotedGradient = keyframes(templateObject_1$W || (templateObject_1$W = __makeTemplateObject(["\n  0% {\n    background-position: 50% 0%;\n  }\n  50% {\n    background-position: 50% 100%;\n  }\n  100% {\n    background-position: 50% 0%;\n  }\n"], ["\n  0% {\n    background-position: 50% 0%;\n  }\n  50% {\n    background-position: 50% 100%;\n  }\n  100% {\n    background-position: 50% 0%;\n  }\n"])));
-/**
- * Priority: Warning --> Success --> Active
- */
-var getBorderColor = function (_a) {
-    var isActive = _a.isActive, isSuccess = _a.isSuccess, isWarning = _a.isWarning, borderBackground = _a.borderBackground, theme = _a.theme;
-    if (borderBackground) {
-        return borderBackground;
-    }
-    if (isWarning) {
-        return theme.colors.warning;
-    }
-    if (isSuccess) {
-        return theme.colors.success;
-    }
-    if (isActive) {
-        return "linear-gradient(180deg, " + theme.colors.primaryBright + ", " + theme.colors.secondary + ")";
-    }
-    return theme.colors.cardBorder;
-};
-var StyledCard = styled.div(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
-    "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"])), getBorderColor, function (_a) {
-    var theme = _a.theme;
-    return theme.radii.card;
-}, function (_a) {
+var StyledCard = styled.div(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  background: #FFF;\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  background: #FFF;\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
+    "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"])), function (_a) {
     var theme = _a.theme, isDisabled = _a.isDisabled;
     return theme.colors[isDisabled ? "textDisabled" : "text"];
 }, function (_a) {
     var isActive = _a.isActive;
     return isActive && css(templateObject_2$t || (templateObject_2$t = __makeTemplateObject(["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "], ["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "])), PromotedGradient);
 }, space);
-var StyledCardInner = styled(Box)(templateObject_4$9 || (templateObject_4$9 = __makeTemplateObject(["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"], ["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"])), function (_a) {
+var StyledCardInner = styled(Box)(templateObject_4$9 || (templateObject_4$9 = __makeTemplateObject(["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  \n"], ["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  \n"])), function (_a) {
     var hasCustomBorder = _a.hasCustomBorder;
     return (hasCustomBorder ? "initial" : "inherit");
 }, function (_a) {
     var theme = _a.theme, background = _a.background;
     return background !== null && background !== void 0 ? background : theme.card.background;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.radii.card;
 });
 StyledCard.defaultProps = {
     isActive: false,
