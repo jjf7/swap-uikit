@@ -129,7 +129,7 @@ const Menu: React.FC<NavProps> = ({
        
         <StyledNav>
          
-          <Flex alignItems="center" height="100%">
+          <Flex alignItems="center" height="100%" width="100%" justifyContent="flex-end">
             {!isMobile && (
               <Box mr="12px">
                 <CakePrice cakePriceUsd={cakePriceUsd} />
