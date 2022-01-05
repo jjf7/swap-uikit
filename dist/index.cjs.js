@@ -4940,7 +4940,7 @@ var Menu$1 = function (_a) {
     return (React__default['default'].createElement(Wrapper, null,
         React__default['default'].createElement(FixedContainer, { showMenu: showMenu, height: totalTopMenuHeight },
             React__default['default'].createElement(StyledNav, null,
-                React__default['default'].createElement(Flex, { alignItems: "center", height: "100%" },
+                React__default['default'].createElement(Flex, { alignItems: "center", height: "100%", width: "100%", justifyContent: "flex-end" },
                     !isMobile && (React__default['default'].createElement(Box, { mr: "12px" },
                         React__default['default'].createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }))),
                     globalMenu,

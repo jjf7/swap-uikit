@@ -4906,7 +4906,7 @@ var Menu$1 = function (_a) {
     return (React__default.createElement(Wrapper, null,
         React__default.createElement(FixedContainer, { showMenu: showMenu, height: totalTopMenuHeight },
             React__default.createElement(StyledNav, null,
-                React__default.createElement(Flex, { alignItems: "center", height: "100%" },
+                React__default.createElement(Flex, { alignItems: "center", height: "100%", width: "100%", justifyContent: "flex-end" },
                     !isMobile && (React__default.createElement(Box, { mr: "12px" },
                         React__default.createElement(CakePrice$1, { cakePriceUsd: cakePriceUsd }))),
                     globalMenu,
