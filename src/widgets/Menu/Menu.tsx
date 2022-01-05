@@ -127,30 +127,7 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
         {banner && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
-        <StyledNav>
-          <Flex>
-            <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
-            {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
-          </Flex>
-          <Flex alignItems="center" height="100%">
-            {!isMobile && (
-              <Box mr="12px">
-                <CakePrice cakePriceUsd={cakePriceUsd} />
-              </Box>
-            )}
-            <Box mt="4px">
-              <LangSelector
-                currentLang={currentLang}
-                langs={langs}
-                setLang={setLang}
-                buttonScale="xs"
-                color="textSubtle"
-                hideLanguage
-              />
-            </Box>
-            {globalMenu} {userMenu}
-          </Flex>
-        </StyledNav>
+        
       </FixedContainer>
       {subLinks && (
         <Flex justifyContent="space-around">
@@ -169,17 +146,7 @@ const Menu: React.FC<NavProps> = ({
       <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
-          <Footer
-            items={footerLinks}
-            isDark={isDark}
-            toggleTheme={toggleTheme}
-            langs={langs}
-            setLang={setLang}
-            currentLang={currentLang}
-            cakePriceUsd={cakePriceUsd}
-            buyCakeLabel={buyCakeLabel}
-            mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
-          />
+         
         </Inner>
       </BodyWrapper>
       {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
