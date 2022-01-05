@@ -4867,18 +4867,12 @@ var links = [
         label: "Disconnect",
     },
 ];
-var MENU_HEIGHT = 56;
+var MENU_HEIGHT = 57;
 var TOP_BANNER_HEIGHT = 70;
 var TOP_BANNER_HEIGHT_MOBILE = 84;
 
 var Wrapper = styled__default['default'].div(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  background-color: ", ";\n  border-bottom: 1px solid ", ";\n  transform: translate3d(0, 0, 0);\n\n  padding-left: 16px;\n  padding-right: 16px;\n"])), MENU_HEIGHT, function (_a) {
-    var theme = _a.theme;
-    return theme.nav.background;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.cardBorder;
-});
+var StyledNav = styled__default['default'].nav(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  transform: translate3d(0, 0, 0);\n  padding-left: 16px;\n  padding-right: 16px;\n"], ["\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: ", "px;\n  transform: translate3d(0, 0, 0);\n  padding-left: 16px;\n  padding-right: 16px;\n"])), MENU_HEIGHT);
 var FixedContainer = styled__default['default'].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  height: ", ";\n  width: 100%;\n  z-index: 20;\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  height: ", ";\n  width: 100%;\n  z-index: 20;\n"])), function (_a) {
     var showMenu = _a.showMenu, height = _a.height;
     return (showMenu ? 0 : "-" + height + "px");

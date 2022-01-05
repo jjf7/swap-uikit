@@ -122,15 +122,10 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <Wrapper>
-      <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
+      <FixedContainer style={{backgroundColor:"white"}} showMenu={showMenu} height={totalTopMenuHeight}>
        
         <StyledNav>
           <Flex alignItems="center" height="100%" width="100%" justifyContent="flex-end">
-            {!isMobile && (
-              <Box mr="12px">
-                <CakePrice cakePriceUsd={cakePriceUsd} />
-              </Box>
-            )}
             {globalMenu} {userMenu}
           </Flex>
         </StyledNav>
