@@ -2133,8 +2133,8 @@ var BottomDrawer = function (_a) {
 };
 
 var PromotedGradient = styled.keyframes(templateObject_1$P || (templateObject_1$P = __makeTemplateObject(["\n  0% {\n    background-position: 50% 0%;\n  }\n  50% {\n    background-position: 50% 100%;\n  }\n  100% {\n    background-position: 50% 0%;\n  }\n"], ["\n  0% {\n    background-position: 50% 0%;\n  }\n  50% {\n    background-position: 50% 100%;\n  }\n  100% {\n    background-position: 50% 0%;\n  }\n"])));
-var StyledCard = styled__default['default'].div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  background: #FFF;\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n    ", " {\n      padding: 0 30px;\n    }\n\n    ", " {\n      padding: 0 30px;\n    }\n\n  ", "\n"], ["\n  background: #FFF;\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
-    "\n\n    ", " {\n      padding: 0 30px;\n    }\n\n    ", " {\n      padding: 0 30px;\n    }\n\n  ", "\n"])), function (_a) {
+var StyledCard = styled__default['default'].div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  background: #FFF;\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n    ", " {\n      padding: 0 30px;\n    }\n\n  ", "\n"], ["\n  background: #FFF;\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
+    "\n\n    ", " {\n      padding: 0 30px;\n    }\n\n  ", "\n"])), function (_a) {
     var theme = _a.theme, isDisabled = _a.isDisabled;
     return theme.colors[isDisabled ? "textDisabled" : "text"];
 }, function (_a) {
@@ -2142,10 +2142,7 @@ var StyledCard = styled__default['default'].div(templateObject_3$a || (templateO
     return isActive && styled.css(templateObject_2$o || (templateObject_2$o = __makeTemplateObject(["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "], ["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "])), PromotedGradient);
 }, function (_a) {
     var theme = _a.theme;
-    return theme.mediaQueries.xs;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.mediaQueries.sm;
+    return theme.mediaQueries.lg;
 }, styledSystem.space);
 var StyledCardInner = styled__default['default'](Box)(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  \n"], ["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  \n"])), function (_a) {
     var hasCustomBorder = _a.hasCustomBorder;

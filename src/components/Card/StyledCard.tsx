@@ -54,6 +54,16 @@ export const StyledCard = styled.div<StyledCardProps>`
       background-size: 400% 400%;
     `}
 
+    
+
+    ${({ theme }) => theme.mediaQueries.xs} {
+      padding: 0 30px;
+    }
+
+    ${({ theme }) => theme.mediaQueries.sm} {
+      padding: 0 30px;
+    }
+
     ${({ theme }) => theme.mediaQueries.lg} {
       padding: 0 30px;
     }
